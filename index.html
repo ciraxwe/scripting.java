@@ -1,0 +1,460 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Scripting for Java</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+
+    <link href="css/zenburn.css" rel="stylesheet">
+</head>
+
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+    <div id="intro" class="step slide">
+        <h1>Scripting for Java</h1>
+        <span class="preparedby">Prepared By<br> Emanuelle Gardu&ntilde;o</span>
+    </div>
+
+    <div id="about" class="step slide">
+        <h1>Scripting Languages</h1>
+        <p>A scripting language or script language is a programming language that supports the writing of
+            scripts, programs written for a software environment that automate the execution of tasks which
+            could alternatively be executed one-by-one by a human operator.</p>
+        <p><a href="http://en.wikipedia.org/wiki/Scripting_language">Wikipedia</a></p>
+
+        <h2>A few options for the JVM</h2>
+
+        <ul>
+            <li>Groovy</li>
+            <li>Beanshell</li>
+            <li>Clojure</li>
+            <li>JavaScript</li>
+        </ul>
+        <ul>
+            <li>Python</li>
+            <li>Ruby</li>
+            <li>Scala</li>
+        </ul>
+    </div>
+
+    <div id="java" class="step slide">
+        <h1>Java</h1>
+        <img src="http://upload.wikimedia.org/wikipedia/en/3/39/Java_logo.svg" width="300" height="550">
+        <p>Java is a general-purpose, concurrent, class-based, object-oriented computer programming language
+            that is specifically designed to have as few implementation dependencies as possible.</p>
+        <p><a href="http://en.wikipedia.org/wiki/Java_(programming_language)">Wikipedia</a></p>
+    </div>
+
+    <div id="java-syntax" class="step slide">
+        <h1>Java Syntax</h1>
+        <pre>
+            <code class="java">public class Greet {
+    private String name;
+
+    public Greet(String who) {
+        this.name = who.toUpperCase().charAt(0) +
+            who.substring(1);
+    }
+
+    public void salute() {
+        System.out.println("Hello " + name + "!");
+    }
+
+    public static void main(String... args) {
+        final Greet g = new Greet("world");
+        g.salute();
+    }
+}</code>
+        </pre>
+    </div>
+
+    <div id="groovy" class="step slide">
+        <h1>Groovy</h1>
+        <p>From the Groovy Home Page</p>
+        <ul>
+            <li>is an agile and <strong>dynamic language</strong> for the <strong>Java Virtual Machine</strong></li>
+            <li>builds upon the strengths of Java but has <strong>additional power features</strong> inspired by languages like Python, Ruby and Smalltalk</li>
+            <li>makes <strong>modern programming features</strong> available to Java developers with <strong>almost-zero learning curve</strong></li>
+            <li>provides the ability to <strong>statically type check</strong> and <strong>statically compile</strong> your code for robustness and performance</li>
+            <li>supports <strong>Domain-Specific Languages</strong> and other compact syntax so your code becomes <strong>easy to read and maintain</strong></li>
+            <li>makes writing shell and build scripts easy with its <strong>powerful processing primitives</strong>, OO abilities and an Ant DSL</li>
+            <li>increases developer productivity by <strong>reducing scaffolding code</strong> when developing web, GUI, database or console applications</li>
+            <li><strong>simplifies testing</strong> by supporting unit testing and mocking out-of-the-box</li>
+            <li>seamlessly <strong>integrates with all existing Java classes and libraries</strong></li>
+            <li>compiles straight to Java bytecode so you can use it anywhere you can use Java</li>
+        </ul>
+    </div>
+
+    <div id="groovy-syntax" class="step slide">
+        <h1>Groovy Syntax</h1>
+        <pre>
+            <code>class Greet {
+    def name
+    Greet(who) { name = who[0].toUpperCase() +
+                      who[1..-1] }
+    def salute() { println "Hello $name!" }
+}
+
+g = new Greet('world') // create object
+g.salute() // output "Hello World!"</code>
+        </pre>
+    </div>
+
+    <div id="bsh" class="step slide">
+        <h1>Beanshell (bsh)</h1>
+        <p>BeanShell is a small, free, embeddable Java source interpreter with object scripting language features, written in Java.
+            BeanShell dynamically executes standard Java syntax and extends it with common scripting conveniences such as loose types,
+            commands, and method closures like those in Perl and JavaScript</p>
+        <p><a href="http://www.beanshell.org/">Beanshell</a></p>
+    </div>
+
+    <div id="bsh-syntax" class="step slide">
+        <h1>Bsh Syntax</h1>
+        <pre>
+            <code class="java">class Greet {
+    Greet(who) {
+        this.name = who.toUpperCase().charAt(0) +
+            who.substring(1);
+    }
+
+    void salute() {
+        print("Hello " + name + "!");
+    }
+}
+
+g = new Greet("world"); // create object
+g.salute(); // output "Hello World!"</code>
+        </pre>
+    </div>
+
+    <div id="clojure" class="step slide">
+        <h1>Clojure</h1>
+        <p>Clojure is a dynamic programming language that targets the Java Virtual Machine (and the CLR, and JavaScript).
+            It is designed to be a general-purpose language, combining the approachability and interactive development of
+            a scripting language with an efficient and robust infrastructure for multithreaded programming. Clojure is a
+            compiled language - it compiles directly to JVM bytecode, yet remains completely dynamic.</p>
+        <p>Every feature supported
+            by Clojure is supported at runtime. Clojure provides easy access to the Java frameworks, with optional type hints
+            and type inference, to ensure that calls to Java can avoid reflection.</p>
+        <p><a href="http://clojure.org/">Clojure</a></p>
+    </div>
+
+    <div id="clojure-syntax" class="step slide">
+        <h1>Clojure Syntax</h1>
+        <pre>
+            <code class="clojure">(ns .
+  (:require [clojure.string :as s]))
+
+(defn greet [who]
+    (println(str "Hello " (s/capitalize who) "!")))
+
+(greet "world") ; output "Hello World!</code>
+        </pre>
+    </div>
+
+    <div id="javascript" class="step slide">
+        <h1>JavaScript</h1>
+        <p><strong>JavaScript (JS)</strong> is an interpreted computer programming language. It was originally implemented
+            as part of web browsers so that client-side scripts could interact with the user, control the browser, communicate
+            asynchronously, and alter the document content that was displayed.</p>
+        <p><a href="http://en.wikipedia.org/wiki/JavaScript">Wikipedia</a></p>
+
+        <h2>Mozilla Rhino</h2>
+        <p><strong>Rhino</strong> is an open-source implementation of JavaScript written entirely in Java. It is typically
+            embedded into Java applications to provide scripting to end users. It is embedded in J2SE 6 as the default Java
+            scripting engine.</p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Rhino">Mozilla</a></p>
+    </div>
+
+    <div id="javascript-syntax" class="step slide">
+        <h1>JavaScript Syntax</h1>
+        <pre>
+            <code class="javascript">function Greet(who) {
+    this.name = who[0].toUpperCase() +
+        who.substr(1);
+}
+
+Greet.prototype.salute = function() {
+    console.log("Hello " + this.name + "!");
+};
+
+var g = new Greet("world"); // create object
+g.salute(); // output "Hello World!"</code>
+        </pre>
+    </div>
+
+    <div id="coffeescript" class="step slide">
+        <h1>CoffeeScript &gt; JS &gt; Rhino</h1>
+        <p>
+            <strong>CoffeeScript is a little language that compiles into JavaScript.</strong>
+            Underneath that awkward Java-esque patina, JavaScript has always had
+            a gorgeous heart. CoffeeScript is an attempt to expose
+            the good parts of JavaScript in a simple way.
+        </p>
+        <p>
+            The golden rule of CoffeeScript is: <i>"It's just JavaScript"</i>. The code
+            compiles one-to-one into the equivalent JS, and there is
+            no interpretation at runtime. You can use any existing JavaScript library
+            seamlessly from CoffeeScript (and vice-versa). The compiled output is
+            readable and pretty-printed, passes through
+            <a href="http://www.javascriptlint.com/">JavaScript Lint</a>
+            without warnings, will work in every JavaScript runtime, and tends
+            to run as fast or faster than the equivalent handwritten JavaScript.
+        </p>
+        <p><a href="http://coffeescript.org/">CoffeeScript</a></p>
+    </div>
+
+    <div id="coffeescript-syntax" class="step slide">
+        <h1>CoffeeScript Syntax</h1>
+        <pre>
+            <code class="coffeescript">class Greet
+    constructor: (who) ->
+        @name = "#{@who[0].toUpperCase()}
+          #{@who[1..-1]}"
+
+    salute: () ->
+        console.log "Hello #{@name}!"
+
+g = new Greet "world" # create object
+g.salute() # output "Hello World!""</code>
+        </pre>
+    </div>
+
+    <div id="python" class="step slide">
+        <h1>Python &gt; Jython</h1>
+        <p>Jython is a Java implementation of Python that combines expressive power with clarity. Jython is freely available
+            for both commercial and non-commercial use and is distributed with source code. Jython is complementary to
+            Java and is especially suited for the following tasks:</p>
+        <ul>
+            <li><strong>Embedded scripting</strong> - Java programmers can add the Jython libraries to their system to allow end
+                users to write simple or complicated scripts that add functionality to the application.</li>
+            <li><strong>Interactive experimentation</strong> - Jython provides an interactive interpreter that can be used to
+                interact with Java packages or with running Java applications. This allows programmers to experiment and debug
+                any Java system using Jython.</li>
+            <li><strong>Rapid application development</strong> - Python programs are typically 2-10X shorter than the equivalent
+                Java program. This translates directly to increased programmer productivity. The seamless interaction between
+                Python and Java allows developers to freely mix the two languages both during development and in shipping products.</li>
+        </ul>
+        <div><a href="http://www.jython.org/">Jython</a></div>
+    </div>
+
+    <div id="jython-syntax" class="step slide">
+        <h1>Python Syntax</h1>
+        <pre>
+            <code class="python">class Greet:
+    def __init__(self, who):
+        self.name = who.capitalize()
+
+    def salute(self):
+        print "Hello %s!" % self.name
+
+g = Greet("world") # create object
+g.salute() # output "Hello World!"</code>
+        </pre>
+    </div>
+
+    <div id="ruby" class="step slide">
+        <h1>Ruby &gt; JRuby</h1>
+        <p>JRuby is a 100% Java implementation of the Ruby programming language. It is Ruby for the JVM.</p>
+
+        <p>JRuby provides a complete set of core "builtin" classes and syntax for the Ruby language, as well as
+            most of the Ruby Standard Libraries. The standard libraries are mostly Ruby's own complement of .rb files,
+            but a few that depend on C language-based extensions have been reimplemented. Some are still missing, but we
+            hope to implement as many as is feasible.</p>
+        <div><a href="http://jruby.org/">JRuby</a></div>
+    </div>
+
+    <div id="jruby-syntax" class="step slide">
+        <h1>Ruby Syntax</h1>
+        <pre>
+            <code class="ruby">class Greet
+    def initialize(who)
+        @name = who.capitalize
+    end
+
+    def salute
+        puts "Hello #{@name}!"
+    end
+end
+
+g = Greet.new "world" # create object
+g.salute() # output "Hello World!"</code>
+        </pre>
+    </div>
+
+    <div id="scala" class="step slide">
+        <h1>Scala</h1>
+        <p>Scala is a general purpose programming language designed to express common programming patterns in a concise,
+            elegant, and type-safe way. It smoothly integrates features of object-oriented and functional languages,
+            enabling Java and other programmers to be more productive. Code sizes are typically reduced by a factor of two
+            to three when compared to an equivalent Java application.</p>
+        <div><a href="http://www.scala-lang.org/">Scala</a></div>
+    </div>
+
+    <div id="scala-syntax" class="step slide">
+        <h1>Scala Syntax</h1>
+        <pre>
+            <code class="scala">class Greet(val who: String) {
+    val name: String = who.toUpperCase().charAt(0) +
+                       who.substring(1)
+
+    def salute() {
+        println("Hello " + name + "!")
+    }
+}
+
+val g = new Greet("world") // create object
+g.salute() // output "Hello World!"</code>
+        </pre>
+    </div>
+
+    <div id="uses" class="step slide">
+        <h1>Real World Examples</h1>
+        <ul>
+            <li><strong>Ceylon</strong> can run Java and JavaScript</li>
+            <li><strong>ClojureScript</strong> clojure to JavaScript compiler</li>
+            <li><strong>Gradle</strong> uses Groovy DSL for its build script</li>
+            <li><strong>Sonar 3.0</strong> uses Ruby on Rails to develop plugins and erb templates</li>
+            <li><strong>Spring</strong> supports JRuby, Groovy and Beanshell objects and classes as Spring beans</li>
+            <li><strong>vert.x</strong> uses Mozilla Rhino, Jython, JRuby, Groovy and Java for its polyglot web development framework</li>
+        </ul>
+    </div>
+
+    <div id="examples" class="step slide">
+        <h1>Examples</h1>
+        <p>This is for Windows users only. Other OS will have to manually install any of Rhino, JRuby, Jython, Groovy, Beanshell,
+            Scala, Clojure to run the examples</p>
+        <p>From MS-DOS execute the following command</p>
+        <pre>
+            <code class="bash small">C:\&gt;@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ^
+ "iex ((New-Object net.webclient).DownloadString('http://localhost:8080/install.ps1'))"</code>
+        </pre>
+        <p>Move into the newely created directory called rex</p>
+        <pre>
+            <code class="bash">C:\&gt;cd rex</code>
+        </pre>
+        <p>If you don't have the binaries you can install them by running the following command</p>
+        <pre>
+            <code class="bash">C:\rex&gt;rex install [packageName]</code>
+        </pre>
+    </div>
+
+    <div id="examples-cont" class="step slide">
+        <h1>Examples (Cont.)</h1>
+        <p>Where package name is any of the following: Rhino, JRuby, Jython, Groovy, bsh,
+            Scala, Clojure</p>
+        <p>The command will download an unzip the binaries into the same folder. And create an executable bat.</p>
+        <p>Finally run the example of your choice, i.e.</p>
+        <pre>
+            <code class="bash">C:\rex&gt;scala scripts\greet.scala</code>
+        </pre>
+        <p>You can also download the zip file from <a href="http://localhost:8080/rex/rex.zip">here</a>.
+            Unzip the file and execute the examples from the scripts folder</p>
+    </div>
+
+    <div id="qa" class="step slide">
+        <h1>Questions and Answers</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Tango-style_question_icon.svg">
+    </div>
+
+    <div id="credits" class="step slide">
+        <h1>Credits</h1>
+        <p>This presentation was possible by:</p>
+
+        <dl>
+           <dt>Highlight.js</dt>
+           <dd>Syntax highlighter</dd>
+           <dt>Impress.js</dt>
+           <dd>HTML 5 Presentations by Bartek Szopka @bartaz</dd>
+           <dt>JQuery</dt>
+           <dd>jQuery is a fast, small, and feature-rich JavaScript library</dd>
+           <dt>Wikimedia</dt>
+           <dd>Is a global movement whose mission is to bring free educational content to the world.</dd>
+        </dl>
+    </div>
+
+    <div id="overview" class="step">
+    </div>
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+
+<script>
+if ("ontouchstart" in document.documentElement) {
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script type="text/javascript" src="js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+var config = {
+    grid: {
+        width: 5,
+        height: 0
+    },
+
+    slide: {
+        stepX: 1000,
+        stepY: 900
+    }
+}
+
+$('div.slide').each(function (index) {
+    var mod = index % config.grid.width;
+
+    if (mod == 0) {
+        config.grid.height++;
+    }
+
+    $(this).attr('data-x', mod * config.slide.stepX);
+    $(this).attr('data-y', (config.grid.height - 1) * config.slide.stepY);
+});
+
+$('#overview').attr('data-x', config.grid.width * config.slide.stepX / 2.5);
+$('#overview').attr('data-y', config.grid.height * config.slide.stepY / 2.5);
+$('#overview').attr('data-scale', config.grid.height);
+// var config={grid:{width:5,height:0},slide:{stepX:1E3,stepY:900}};$("div.slide").each(function(a){a%=config.grid.width;0==a&&config.grid.height++;$(this).attr("data-x",a*config.slide.stepX);$(this).attr("data-y",(config.grid.height-1)*config.slide.stepY)});$("#overview").attr("data-x",config.grid.width*config.slide.stepX/2.5);$("#overview").attr("data-y",config.grid.height*config.slide.stepY/2.5);$("#overview").attr("data-scale",config.grid.height);
+</script>
+
+<script src="js/impress.js"></script>
+<script>
+var dispatch = {
+    111: function() {
+        impress().goto('overview');
+    },
+
+    49: function() {
+      impress().goto('intro');
+    },
+
+    48: function() {
+      impress().goto('credits');
+    }
+}
+$(document).keypress(function (e) {
+    dispatch[e.which] && dispatch[e.which]();
+});
+impress().init();
+// var dispatch={111:function(){impress().goto("overview")},49:function(){impress().goto("intro")},48:function(){impress().goto("credits")}};$(document).keypress(function(a){dispatch[a.which]&&dispatch[a.which]()});impress().init();
+</script>
+
+</body>
+</html>
