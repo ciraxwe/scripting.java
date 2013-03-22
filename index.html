@@ -5,8 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>Scripting for Java</title>
+    <title>Scripting in Java</title>
 
+    <link href='http://fonts.googleapis.com/css?family=Skranji' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Expletus+Sans' rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
     <link href="css/impress-demo.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
@@ -24,8 +26,12 @@
 
 <div id="impress">
     <div id="intro" class="step slide">
-        <h1>Scripting for Java</h1>
-        <span class="preparedby">Prepared By<br> Emanuelle Gardu&ntilde;o</span>
+        <h1>Scripting in Java</h1>
+        <div class="preparedby">Prepared By<br> Emanuelle Gardu&ntilde;o</div>
+        <div class="email">emanuelle.garduno@gmail.com</div>
+        <img id="note" src="images/note.svg" width="300">
+        <img id="java" src="http://upload.wikimedia.org/wikipedia/en/3/39/Java_logo.svg" width="180">
+        <img id="gear" src="images/gear.svg" width="150">
     </div>
 
     <div id="about" class="step slide">
@@ -393,7 +399,6 @@ g.salute() // output "Hello World!"</code>
 <div class="hint">
     <p>Use a spacebar or arrow keys to navigate</p>
 </div>
-
 <script>
 if ("ontouchstart" in document.documentElement) {
     document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
@@ -403,6 +408,7 @@ if ("ontouchstart" in document.documentElement) {
 <script type="text/javascript" src="js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 
 <script type="text/javascript">
 var config = {

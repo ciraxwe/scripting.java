@@ -3,6 +3,11 @@ a {
     color: rgb(75, 195, 255);
 }
 
+h1 {
+    /*font-family: 'Skranji'*/
+    font-family: 'Expletus Sans', cursive;
+}
+
 p {
     margin: 10px 0;
 }
@@ -28,7 +33,7 @@ pre code {
     font-family: monospace;
     line-height: 130%;
     margin-top: -20px;
-
+/*
     -webkit-transform: translateZ(300px);
     -moz-transform:    translateZ(300px);
     -ms-transform:     translateZ(300px);
@@ -47,7 +52,7 @@ pre code {
     -moz-transform:    translateZ(0px);
     -ms-transform:     translateZ(0px);
     -o-transform:      translateZ(0px);
-    transform:         translateZ(0px);
+    transform:         translateZ(0px);*/
 }
 
 .slide h1 {
@@ -73,12 +78,36 @@ pre code {
     line-height: 150%;
 }
 
-/*#intro {
-    background-image: url('../images/intro.png');
-    background-size: contain;
+#intro #note {
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
 }
-*/
+
+#intro #java {
+    position: absolute;
+    left: 50%;
+    margin-left: -90px;
+    padding-top: 10px;
+}
+
+#intro #gear {
+    position: absolute;
+    left: 50%;
+    margin-left: 55px;
+    top: 50%;
+    padding-top: 10px;
+}
+
 #intro .preparedby {
+    color: rgb(0, 140, 210);
+    font-size: 30px;
+    position: absolute;
+    bottom: 100px;
+    left: 30px;
+}
+
+#intro .email {
     color: rgb(0, 140, 210);
     font-size: 30px;
     position: absolute;
@@ -88,11 +117,8 @@ pre code {
 
 #intro h1 {
     color: rgb(65, 67, 70);
-    font-size: 60px;
+    font-size: 70px;
     font-style: bold;
-    position: absolute;
-    bottom: 160px;
-    left: 30px;
 }
 
 #overview { display: none }
