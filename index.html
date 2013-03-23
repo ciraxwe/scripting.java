@@ -437,7 +437,6 @@ $('div.slide').each(function (index) {
 $('#overview').attr('data-x', config.grid.width * config.slide.stepX / 2.5);
 $('#overview').attr('data-y', config.grid.height * config.slide.stepY / 2.5);
 $('#overview').attr('data-scale', config.grid.height);
-// var config={grid:{width:5,height:0},slide:{stepX:1E3,stepY:900}};$("div.slide").each(function(a){a%=config.grid.width;0==a&&config.grid.height++;$(this).attr("data-x",a*config.slide.stepX);$(this).attr("data-y",(config.grid.height-1)*config.slide.stepY)});$("#overview").attr("data-x",config.grid.width*config.slide.stepX/2.5);$("#overview").attr("data-y",config.grid.height*config.slide.stepY/2.5);$("#overview").attr("data-scale",config.grid.height);
 </script>
 
 <script src="js/impress.js"></script>
@@ -459,8 +458,21 @@ $(document).keypress(function (e) {
     dispatch[e.which] && dispatch[e.which]();
 });
 impress().init();
-// var dispatch={111:function(){impress().goto("overview")},49:function(){impress().goto("intro")},48:function(){impress().goto("credits")}};$(document).keypress(function(a){dispatch[a.which]&&dispatch[a.which]()});impress().init();
 </script>
 
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-37696520-2']);
+      _gaq.push(['_trackPageview']);
+      _gaq.push(['_trackPageLoadTime']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
 </body>
 </html>
