@@ -1,14 +1,13 @@
 public class Greet {
-    private String who;
+    private String name;
 
     public Greet(String who) {
-        this.who = who;
+        name = who.toUpperCase().charAt(0) +
+            who.substring(1);
     }
 
     public void salute() {
-        System.out.println("Hello " +
-            who.toUpperCase().charAt(0) +
-            who.substring(1) + "!");
+        System.out.println("Hello " + name + "!");
     }
 
     public static void main(String... args) {
