@@ -4,7 +4,7 @@ function Greet(who) {
 }
 
 Greet.prototype.salute = function() {
-    console.log("Hello " + this.name + "!");
+    print("Hello " + this.name + "!");
 };
 
 var g = new Greet("world"); // create object
