@@ -1,0 +1,30 @@
+frame = new JFrame("Celsius to Fahrenheit Converter");
+
+celsius = new JTextField("0");
+celsius.columns = 5;
+
+fahrenheit = new JTextField("32");
+fahrenheit.columns = 5;
+
+panel = new JPanel();
+panel.add(celsius);
+panel.add(new JLabel(" Celsius = "));
+panel.add(fahrenheit);
+panel.add(new JLabel(" Fahrenheit "));
+
+frame.getContentPane().add(panel, BorderLayout.CENTER);
+
+button = new JButton("Convert");
+button.addActionListener(new ActionListener() {
+    actionPerformed(evt) {
+        c = (int) Double.parseDouble(celsius.text);
+        f = c * 9 / 5 + 32;
+        fahrenheit.text = Integer.toString(f);
+    }
+});
+
+frame.getContentPane().add(button, BorderLayout.SOUTH);
+
+frame.defaultCloseOperation = JFrame.EXIT_ON_CLOSE;
+frame.pack();
+frame.visible = true;
