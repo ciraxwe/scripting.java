@@ -27,32 +27,30 @@ dl dd {
     margin-left: 210px;
 }
 
+code.install {
+    display: block;
+    padding: 0.5em;
+    background: #3F3F3F;
+    color: #DCDCDC;
+    border-radius: 5px;
+    font-size: 22px;
+    font-family: monospace;
+}
+
+code.bash .string {
+    color: #CC9393;
+}
+
+code.bash .keyword {
+    color: #E3CEAB;
+}
+
 pre code {
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 25px;
     font-family: monospace;
     line-height: 130%;
     margin-top: -20px;
-/*
-    -webkit-transform: translateZ(300px);
-    -moz-transform:    translateZ(300px);
-    -ms-transform:     translateZ(300px);
-    -o-transform:      translateZ(300px);
-    transform:         translateZ(300px);
-
-    -webkit-transition: 1s;
-    -moz-transition:    1s;
-    -ms-transition:     1s;
-    -o-transition:      1s;
-    transition:         1s;
-}
-
-.present pre code {
-    -webkit-transform: translateZ(0px);
-    -moz-transform:    translateZ(0px);
-    -ms-transform:     translateZ(0px);
-    -o-transform:      translateZ(0px);
-    transform:         translateZ(0px);*/
 }
 
 .slide h1 {
@@ -188,5 +186,5 @@ pre code {
 }
 
 #examples pre code.small, #examples-cont pre code.small {
-    font-size: 15px;
+    font-size: 22px;
 }
