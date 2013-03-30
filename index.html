@@ -3,16 +3,16 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>Scripting in Java</title>
 
-    <link href='http://fonts.googleapis.com/css?family=Skranji' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Expletus+Sans' rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
     <link href="css/impress-demo.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
-
     <link href="css/zenburn.css" rel="stylesheet">
 </head>
 
@@ -228,14 +228,14 @@ g.salute(); // output "Hello World!"</code>
         <pre>
             <code class="coffeescript">class Greet
     constructor: (who) ->
-        @name = "#{@who[0].toUpperCase()}
-          #{@who[1..-1]}"
+        @name =
+            "#{who[0].toUpperCase()}#{who[1..-1]}"
 
     salute: () ->
-        console.log "Hello #{@name}!"
+        print "Hello #{@name}!"
 
 g = new Greet "world" # create object
-g.salute() # output "Hello World!""</code>
+g.salute() # output "Hello World!"</code>
         </pre>
     </div>
 
@@ -461,18 +461,11 @@ impress().init();
 </script>
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-37696520-2']);
-      _gaq.push(['_trackPageview']);
-      _gaq.push(['_trackPageLoadTime']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+    <script>
+        var _gaq=[['_setAccount','UA-37696520-2'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
 </body>
 </html>

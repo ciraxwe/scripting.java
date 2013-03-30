@@ -10,12 +10,12 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="300"
-   height="300"
+   width="150"
+   height="148"
    id="svg3727"
    version="1.1"
-   inkscape:version="0.48.1 "
-   sodipodi:docname="New document 8">
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="gear.svg">
   <defs
      id="defs3729">
     <linearGradient
@@ -79,9 +79,9 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1018"
-     inkscape:window-x="1432"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
@@ -92,7 +92,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -100,12 +100,12 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-752.36218)">
+     transform="translate(0,-904.36218)">
     <g
        id="layer5"
        inkscape:label="Text"
        style="display:inline"
-       transform="matrix(10.336269,0,0,10.26441,-195.34308,556.6457)">
+       transform="matrix(5.1681344,0,0,5.1322049,-97.671542,804.00044)">
       <g
          id="g2186"
          transform="matrix(0.703833,0,0,0.703833,-1.924835,14.32997)">
