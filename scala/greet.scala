@@ -3,7 +3,7 @@ class Greet(val who: String) {
                        who.substring(1)
 
     def salute() {
-        println("Hello " + name + "!")
+        println(s"Hello $name!")
     }
 }
 
