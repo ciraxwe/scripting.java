@@ -1,10 +1,10 @@
 class Greet(val who: String) {
-    val name: String = who.toUpperCase().charAt(0) +
-                       who.substring(1)
+  val name: String = who.toUpperCase().charAt(0) +
+                     who.substring(1)
 
-    def salute() {
-        println(s"Hello $name!")
-    }
+  def salute() {
+    println(s"Hello $name!")
+  }
 }
 
 val g = new Greet("world") // create object
