@@ -319,12 +319,12 @@ g.salute() # output "Hello World!"</code>
         <h1>Scala Syntax</h1>
         <pre>
             <code class="scala">class Greet(val who: String) {
-    val name: String = who.toUpperCase().charAt(0) +
-                       who.substring(1)
+  val name: String = who.toUpperCase().charAt(0) +
+                     who.substring(1)
 
-    def salute() {
-        println("Hello " + name + "!")
-    }
+  def salute() {
+    println(s"Hello $name!")
+  }
 }
 
 val g = new Greet("world") // create object
